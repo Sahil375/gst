@@ -1,0 +1,81 @@
+body {
+    text-align: center;
+    font-family: 'DM Serif Display', serif;
+    font-family: 'Gabarito', cursive;          
+}
+input{
+    font-family: 'DM Serif Display', serif;
+    font-family: 'Gabarito', cursive;
+    font-size: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#submitButton, #submitButton2{
+    font-family: 'DM Serif Display', serif;
+    font-family: 'Gabarito', cursive;
+    display: block;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+#submitButton:hover, #submitButton2:hover{
+    background-color: rgb(159, 10, 10);
+    color: white;
+    cursor: pointer;
+}
+
+#submitButton:active {
+    background-color: #4CAF50;
+    transform: translateY(2px);
+}
+.checkbox {
+
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    font-size: 16px;
+}
+
+/*
+.checkbox option {
+    font-size: 16px; 
+    padding: 10px; 
+    cursor: pointer; 
+}
+
+
+.checkbox:hover {
+    border-color: #007bff; 
+}
+
+
+.checkbox:focus {
+    border-color: #007bff; 
+    box-shadow: 0 0 5px 0 rgba(0, 123, 255, 0.5); 
+} */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="file"] {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+}

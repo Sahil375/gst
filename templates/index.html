@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Gabarito:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+  <div class="container">
+    <div class="block" id="block1">
+      <h1>Step1 & Step2</h1>
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="fileUpload">Upload File:</label>
+        <input type="file" id="fileUpload" name="file" accept=".xls,.xlsx" required>
+        <label for="processingStep">Processing Step:</label>
+        <select class="checkbox" id="processingStep" name="step" required>
+          <option value="step1">Step 1</option>
+          <option value="step2">Step 2</option>
+        </select>
+        <button id="submitButton" type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="block" id="block2"></div>
+      <h1 class="header">Step3</h1>
+      <form action="/upload1" method="post" enctype="multipart/form-data">
+        <label for="pilotFile">Pilot File:</label>
+        <input type="file" id="pilotFile" name="companyFile" accept=".xls,.xlsx,.xlsm" required>
+        <label for="governmentFile">Government File:</label>
+        <input type="file" id="governmentFile" name="governmentFile" accept=".xls,.xlsx,.xlsm" required>
+        <button id="submitButton2" type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="block" id="block3"></div>
+      <h1 class="header">Summary</h1>
+      <form action="/upload2" method="post" enctype="multipart/form-data">
+        <label for="pilotFile">Pilot File(Output of Step2):</label>
+        <input type="file" id="pilotFile" name="s2File" accept=".xls,.xlsx,.xlsm" required>
+        <label for="governmentFile">Pilot File(Output of Step3):</label>
+        <input type="file" id="governmentFile" name="s3File" accept=".xls,.xlsx,.xlsm" required>
+        <button id="submitButton2" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
